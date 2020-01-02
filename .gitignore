@@ -1,1 +1,7 @@
 JSONWebToken.xcodeproj/xcuserdata
+
+# User specific settings of XCode
+xcuserdata/
+
+# macOS specific
+.DS_Store 
