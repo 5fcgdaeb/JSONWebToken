@@ -30,6 +30,13 @@ public func ClaimTransformNumber(_ value : Any) throws -> NSNumber {
         throw ClaimValidatorError(message: "\(value) is not a Number type value")
     }
 }
+public func ClaimTransformBool(_ value : Any) throws -> Bool {
+    if let boolValue = value as? Bool {
+        return boolValue
+    } else {
+        throw ClaimValidatorError(message: "\(value) is not a Bool type value")
+    }
+}
 public func ClaimTransformArray<U>(_ elementTransform : (Any) throws -> U, value : Any) throws -> [U] {
     if let array = value as? NSArray {
         return try array.map(elementTransform)
